@@ -7,23 +7,12 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Layout</title>
+	<title>Cadastro de Usuário</title>
 </h:head>
 <h:body>
-
-	<p:layout fullPage="true">
-		<p:layoutUnit position="north" size="120">
-			<p:outputLabel value="North" />
-		</p:layoutUnit>
-		
-		<p:layoutUnit position="center">
-			<p:outputLabel value="Center" />
-		</p:layoutUnit>
-		
-		<p:layoutUnit position="south" size="50" style="text-align: right;" >
-			<p:outputLabel value="Desenvolvido por: João Ferreira" />
-		</p:layoutUnit>
-	</p:layout>
-
+	<h1><h:outputText value="#{usuarioBean.usuario.nome}"/>, seja Bem-vindo</h1>
+	Seu cadastro foi efetuado com sucesso.
+	<br/>
+	Clique <a href="login.xhtml">aqui</a> para efetuar o login.
 </h:body>
 </html>
