@@ -14,4 +14,12 @@
 	<param-name>primefaces.THEME</param-name>
 	<param-value>bootstrap</param-value>
   </context-param>
+  <filter>
+  	<filter-name>conexaoFilter</filter-name>
+  	<filter-class>financeiro.web.filter.ConexaoHibernateFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>conexaoFilter</filter-name>
+  	<url-pattern>*.xhtml</url-pattern>
+  </filter-mapping>
 </web-app>
