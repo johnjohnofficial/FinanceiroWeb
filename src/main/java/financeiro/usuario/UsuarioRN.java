@@ -1,9 +1,16 @@
 package financeiro.usuario;
 
+<<<<<<< HEAD
 import java.util.List;
 
 import financeiro.util.DAOFactory;
 
+=======
+import financeiro.util.DAOFactory;
+
+import java.util.List;
+
+>>>>>>> master
 public class UsuarioRN {
 	private UsuarioDAO usuarioDAO;
 	
@@ -15,10 +22,13 @@ public class UsuarioRN {
 		return this.usuarioDAO.carregar(codigo);
 	}
 	
+<<<<<<< HEAD
 	public Usuario buscaPorLogin(String login) {
 		return this.usuarioDAO.buscarPorLogin(login);
 	}
 	
+=======
+>>>>>>> master
 	public void salvar(Usuario usuario) {
 		Integer codigo = usuario.getCodigo();
 		

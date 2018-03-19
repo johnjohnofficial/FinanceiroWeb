@@ -1,7 +1,20 @@
+<<<<<<< HEAD
+=======
+/**
+ * 
+ */
+>>>>>>> master
 package financeiro.usuario;
 
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+/**
+ * @author joao.ferreira
+ *
+ */
+>>>>>>> master
 public interface UsuarioDAO {
 	public void salvar(Usuario usuario);
 	public void atualizar(Usuario usuario);
