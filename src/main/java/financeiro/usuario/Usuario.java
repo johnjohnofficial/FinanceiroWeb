@@ -3,26 +3,38 @@ package financeiro.usuario;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Usuario")
 public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue
+	@Column(name="codigo")
 	private Integer codigo;
+	@Column(name="nome")
 	private String nome;
+	@Column(name="email")
 	private String email;
 	@org.hibernate.annotations.NaturalId
+	@Column(name="login")
 	private String login;
+	@Column(name="senha")
 	private String senha;
+	@Column(name="nascimento")
 	private Date nascimento;
+	@Column(name="celular")
 	private String celular;
+	@Column(name="idioma")
 	private String idioma;
+	@Column(name="ativo")
 	private boolean ativo;
 	
 	/*

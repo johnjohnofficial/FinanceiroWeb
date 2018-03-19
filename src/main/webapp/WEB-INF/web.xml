@@ -6,12 +6,28 @@
     <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  	<welcome-file>index.htm</welcome-file>
+  	<welcome-file>index.jsp</welcome-file>
+  	<welcome-file>default.html</welcome-file>
+  	<welcome-file>default.htm</welcome-file>
+  	<welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
   <servlet-mapping>
     <servlet-name>Faces Servlet</servlet-name>
-    <url-pattern>*.xhtml</url-pattern>
+    <url-pattern>*.jsf</url-pattern>
   </servlet-mapping>
   <context-param>
 	<param-name>primefaces.THEME</param-name>
 	<param-value>bootstrap</param-value>
   </context-param>
+  <filter>
+  	<filter-name>conexaoFilter</filter-name>
+  	<filter-class>financeiro.web.filter.ConexaoHibernateFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>conexaoFilter</filter-name>
+  	<url-pattern>*.jsf</url-pattern>
+  </filter-mapping>
 </web-app>
