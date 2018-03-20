@@ -15,15 +15,9 @@ import financeiro.util.HibernateUtil;
 
 public class ConexaoHibernateFilter implements Filter {
 	private SessionFactory sf;
-<<<<<<< HEAD
 
 	public void init(FilterConfig filterConfig) throws ServletException {
 		this.sf = HibernateUtil.getSessionFactory();
-=======
-	
-	public void destroy() {
-		
->>>>>>> master
 	}
 
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)
@@ -33,16 +27,11 @@ public class ConexaoHibernateFilter implements Filter {
 			chain.doFilter(servletRequest, servletResponse);
 			this.sf.getCurrentSession().getTransaction().commit();
 			this.sf.getCurrentSession().close();
-<<<<<<< HEAD
 		} catch (Throwable ex) {
-=======
-		} catch(Throwable ex) {
->>>>>>> master
 			try {
 				if(this.sf.getCurrentSession().getTransaction().isActive()) {
 					this.sf.getCurrentSession().getTransaction().rollback();
 				}
-<<<<<<< HEAD
 			} catch (Exception t) {
 				t.printStackTrace();
 			}
@@ -51,16 +40,4 @@ public class ConexaoHibernateFilter implements Filter {
 	}
 
 	public void destroy() {	}
-=======
-			} catch (Throwable t) {
-				t.printStackTrace();
-			}
-			throw new ServletException();
-		}
-	}
-
-	public void init(FilterConfig config) throws ServletException {
-		this.sf = HibernateUtil.getSessionFactory();
-	}
->>>>>>> master
 }
